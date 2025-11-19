@@ -13,7 +13,7 @@ Project deploys a full Windows Active Directory environment in a virtualized lab
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10</b> (21H2)
+- <b>Windows 11</b> (21H2)
 - <b>Server 2019</b>
 
 <h2>Program walk-through:</h2>
@@ -72,7 +72,7 @@ Click on "Internet Protocol Version 4 (TCP/IPv4)" and fill it out.
 
 <img src="https://i.imgur.com/lj2b1gj.png" height="80%" width="80%"/>
 
-We do not fill out the default gateway since the Domain Controller itself is the gateway.  Additionally, the DNS server is set to be the loopback address since DNS will be automatically installed into the Domain Controller once AD is configured. Press "f". 
+We do not fill out the default gateway since the Domain Controller itself is the gateway.  Additionally, the DNS server is set to be the loopback address since DNS will be automatically installed into the Domain Controller once AD is configured. Press "Ok". 
 
 Now we can rename the pc by going to settings, search about in settings, and click rename for "DomainController".
 
@@ -88,13 +88,34 @@ Click on "Active Directory Domain Services" to add this feature to the Domain Co
 
 
 
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
+<img src="https://i.imgur.com/0DNzWlu.png" height="80%" width="80%"/>
+
+Select "Add a new forest" and then choose any domain name. Press "Next".  In "Domain Controller Options", you have to make a password (could be same as before) and keep on pressing "Next" until you get to install. Once installed, the vm will restart. Once we are logged back in, we could create our own admin account.  Go to the windows icon -> "Windows Administrative Tools" -> "Active Directory Users and Computers".
+
+<img src="https://i.imgur.com/vbm03fg.png" height="80%" width="80%"/>
+
+Under "mydomain.com", create a new "Organizational Unit" called "_ADMINS".
+
+<img src="https://i.imgur.com/W2wuRch.png" height="80%" width="80%"/>
+
+Under "_ADMINS", we could create a new user (will be our admin account) and fill in the information.  
+
+<img src="https://i.imgur.com/cgWuxu0.png" height="80%" width="80%"/>
+
+Once you created the user, you will make your own password (I used secretPassword1 again) and press "Next" and then "Finish". Then, to make this account an admin account, right click the account and click "Properties".  Click "Member of" -> "Add" and type domain admins in the text box.  Click "Check Names" and press "Ok". Press "Apply" to turn the account into an admin account. To get into that account, sign out of current account.  Then instead of the normal log in, go to Other user and type in your admin credentials. EX: my username is: a-storgaeide. My passward is: secretPassword1.
+
+<img src="https://i.imgur.com/2U3HwuV.png" height="80%" width="80%"/>
+
+The next step is to add NAT to allow clients to be apart of the internal network while being able to communicate to the internet. Go to Server Manager and click "Add roles and features". Keep on pressing next until you get to "Server Roles".  Pick "Remote Access".
+
+<img src="https://i.imgur.com/46rRFza.png" height="80%" width="80%"/>
+
+Keep on pressing "Next" until you get to "Select role services". Click on "Routing", and "DirectAccess and VPN (RAS)" will be automaically selected.
+
+<img src="https://i.imgur.com/oBgyV8y.png" height="80%" width="80%"/>
+
+Keep on pressing "Next" until you can install.
+
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
