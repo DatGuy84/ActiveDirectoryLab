@@ -114,10 +114,16 @@ Keep on pressing "Next" until you get to "Select role services". Click on "Routi
 
 <img src="https://i.imgur.com/oBgyV8y.png" height="80%" width="80%"/>
 
-Keep on pressing "Next" until you can install.
+Keep on pressing "Next" until you can install. Close the popup and click on "Tools" on the upper right corner of Server Manager.  Select "Routing and Remote Access". Right click DOMAINCONTROLLER and click "Configure and Enable Routing and Remote Access".
 
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
+<img src="https://i.imgur.com/EuJSqPv.png" height="80%" width="80%"/>
+
+Click "Next", then make sure to select NAT. Then, it will ask you to select the interface that will connect to the internet. Choose the NIC that has NAT (in my case, it is wanLink).
+
+<img src="https://i.imgur.com/5DXwaor.png" height="80%" width="80%"/>
+
+Then press "Next" and "Finish".  NAT is now configured on the Domain Controller, allowing clients to connect to the internet.
+
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
