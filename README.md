@@ -30,18 +30,21 @@ Go to the Windows Server 2019 ISO and download
 <img src="https://i.imgur.com/b4l3VoR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
-Open Virtualbox and click on new.  This gives a popup for a new virtual machine.  This one will be your domain controller (this will be referenced later as "Domain Controller").  The ISO image will be the Windows Server 2019 ISO. Click Finish
+Open Virtualbox and click on new.  This gives a popup for a new virtual machine.  This one will be your domain controller (this will be referenced later as "Domain Controller").  The ISO image will be the Windows Server 2019 ISO. Click Finish.
+
 <img src="https://i.imgur.com/dcowiwX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
+Right click on Domain Controller and open its settings. Go to the Network section and ensure that NAT is adapter one.  This will map private IP addresses to public IP addresses.  Then click on adapter 2 and in "Attached to", select Internal network.  This will connect to the private internal network.
 
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
+<img src="https://i.imgur.com/Vh1XziB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Click "OK" and run the VM.  This is the installation process and keep on pressing next until you get to here.
+
+<img src="https://i.imgur.com/XHgHzLS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Make sure to choose Windows server 2019 standard evaluation (desktop experience).  If you don't choose desktop experience you will only have a command line. Accept and install the "Custom: Install Windows only (advanced)". Press "Next".
+
 Observe the wiped disk:  <br/>
 <img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
