@@ -48,9 +48,12 @@ Make sure to choose Windows server 2019 standard evaluation (desktop experience)
 Once done downloading, it will ask for you to create your password which could be anything (mine will be "secretPassword1") and you should be at the lockscreen. Ctrl + Alt + Delete might not work so click on "Input", "Keyboard", and click "Insert Ctrl+Alt+Del" there.
 <img src="https://i.imgur.com/QY3a1DU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Enter your password
+Enter your password and you should have Server Manager up.
 
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/T5Wt9jp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+In the bottom left corner, click on the Windows icon (four squares) and search up "Settings". Open it and go to
+
 <img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
