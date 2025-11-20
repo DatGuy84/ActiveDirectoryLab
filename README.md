@@ -161,11 +161,13 @@ Click "I don't have a product key". Then you will be asked on what Image you wan
 Keep on pressing "Next" and "Install". Installation process can take quite a bit of time. Then you will choose your region and keyboard.  You should be brought to this page.
 
 <img src="https://i.imgur.com/CswKQlo.png" height="80%" width="80%"/>
-If you do not have a "I don't have internet option," press shift + f10 and in the terminal, type "OOBE\BYPASSNRO".  Then shut down the VM and run it again.
 
+If you do not have a "I don't have internet option," press shift + f10 and in the terminal, type "OOBE\BYPASSNRO".  Then shut down the VM and run it again. Click the "I don't have internet option". You will be brought to this page.
 
+<img src="https://i.imgur.com/yAhOBCt.png" height="80%" width="80%"/>
 
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
+It could be any name, so I will choose "user". Keep on pressing "Next" until you can press "Accept".
+
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
