@@ -13,7 +13,7 @@ Project deploys a full Windows Active Directory environment in a virtualized lab
 
 <h2>Environments Used </h2>
 
-- <b>Windows 11</b> (21H2)
+- <b>Windows 11</b>
 - <b>Server 2019</b>
 
 <h2>Program walk-through:</h2>
@@ -122,13 +122,28 @@ Click "Next", then make sure to select NAT. Then, it will ask you to select the 
 
 <img src="https://i.imgur.com/5DXwaor.png" height="80%" width="80%"/>
 
-Then press "Next" and "Finish".  NAT is now configured on the Domain Controller, allowing clients to connect to the internet.
+Then press "Next" and "Finish".  NAT is now configured on the Domain Controller, allowing clients to connect to the internet.  The last thing to configure for the domain controller is the DHCP server that will allow clients to connect to the internet from inside this internal network.  Like for AD DS and NAT, click "Add roles and features" in Server Manager. This time select "DHCP Server".
 
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
+<img src="https://i.imgur.com/kFcf0ZY.png" height="80%" width="80%"/>
+
+Install it. Then we have to specify what IP ranges could be used for the network.  In the dashboard of Server Mangager, click on "Tools" and then click "DHCP". Click the dropdown for "domaincontroller" and right click "IPv4".  We will define the scope of the addresses with "New Scope".
+
+<img src="https://i.imgur.com/rdo3mYs.png" height="80%" width="80%"/>
+
+Once you click "New Scope", a popup will appear and press "Next".  The name for the scope could be anything but I will name it to be the range of IP addresses.
+
+<img src="https://i.imgur.com/hjK5rbf.png" height="80%" width="80%"/>
+
+After setting the name, we could specify the IP addresses for the scope.  As stated in the name, the start IP address will be 172.16.0.100 and the end IP address will be 172.16.0.200.  Since we specified the subnet mask earlier and have 24 network bits, we have 8 host bits leftover so we can spare having 100 hosts.
+
+<img src="https://i.imgur.com/KthJx3O.png" height="80%" width="80%"/>
+
+Keep on clicking "Next" until you get to "Router(Gateway)". For the internal network, clients will use the domain controller's internal adapter, or NIC, to connect, so the IP address should be set to the domain controller (172.16.0.1) and click "Add".
+
+<img src="https://i.imgur.com/pg4HlZK.png" height="80%" width="80%"/>
+
+
+
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
