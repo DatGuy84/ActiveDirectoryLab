@@ -166,19 +166,20 @@ If you do not have a "I don't have internet option," press shift + f10 and in th
 
 <img src="https://i.imgur.com/yAhOBCt.png" height="80%" width="80%"/>
 
-It could be any name, so I will choose "user". Keep on pressing "Next" until you can press "Accept".
+It could be any name, so I will choose "user". Keep on pressing "Next" until you can press "Accept". Once inside your client, you can check if you are within the internal network by clicking the Windows icon, typing "cmd", opening it, type "ipconfig" and press enter.  DNS suffix should be mydomain.com, should have an IPv4 address within the scope specified by DHCP, subnet mask of 255.255.255.0, and a default gateway of 172.16.0.1.  Additionally, to check if you have internet access, type "ping www.google.com" and you should be getting several replies.  
+If this does not work, then you have to check your DHCP or DNS settings.  It should look like this:
 
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
-<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
+<img src="https://i.imgur.com/EYihXBH.png" height="80%" width="80%"/>
+
+Now, we are going to rename the pc and have it join the domain.  Go to the Windows icon and enter settings.  In settings, go to About and click "Domain or workgroup".
+
+<img src="https://i.imgur.com/WY2Pzi6.png" height="80%" width="80%"/>
+
+Then click on "Change". Set the client's name to whatever you named it and select "Domain" and enter "mydomain.com".
+
+<img src="https://i.imgur.com/yaVyzWC.png" height="80%" width="80%"/>
+
+Press "Ok". A popup will appear for an account with permissions to join the domain.  Put in the admin credentials and press "Ok". Restart the VM. Now you can log in with the client while being in the domain.
 
 <!--
  ```diff
