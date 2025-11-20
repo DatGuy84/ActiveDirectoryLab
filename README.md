@@ -14,6 +14,7 @@ Project deploys a full Windows Active Directory environment in a virtualized lab
 <h2>Environments Used </h2>
 
 - <b>Windows 11</b>
+- <b>Oracle Virtualbox</b>
 - <b>Server 2019</b>
 
 <h2>Program walk-through:</h2>
