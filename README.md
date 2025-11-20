@@ -142,8 +142,31 @@ Keep on clicking "Next" until you get to "Router(Gateway)". For the internal net
 
 <img src="https://i.imgur.com/pg4HlZK.png" height="80%" width="80%"/>
 
+Keep on pressing "Next" and then click "Finish".  Now that DHCP is configured, we can add a client computer to the internal network.  Leave the domain controller running the background and go to Virtualbox. Create a new VM and the ISO image is the windows 11 ISO.  This will be the client VM (named Client1).
+
+<img src="https://i.imgur.com/pMZcxBt.png" height="80%" width="80%"/>
+
+Press "Finish".  Then right click Client1 and go to its settings. Go to the network tab and make sure "Attached to" is Internal Network since it will connect to the domain controller's internal NIC. 
+
+<img src="https://i.imgur.com/4nCRLSA.png" height="80%" width="80%"/>
+
+Press "Ok" and then run the VM. (If you are met with a black screen that states "Press any key to boot from CD or DVD..." and it did not find a bootable device, I found that spamming f12 on boot causes it to bypass the time out of not finding a bootable device and looks to boot from the ISO.  Choose your preferred language and keyboard method. Then make sure to "Install Windows 11" and click the checkbox and press "Next".  Then you will be asked for a product key.
+
+<img src="https://i.imgur.com/y3nH2Zu.png" height="80%" width="80%"/>
+
+Click "I don't have a product key". Then you will be asked on what Image you want to select. Choose "Windows 11 Pro".
+
+<img src="https://i.imgur.com/Pyhv58v.png" height="80%" width="80%"/>
+
+Keep on pressing "Next" and "Install". Installation process can take quite a bit of time. Then you will choose your region and keyboard.  You should be brought to this page.
+
+<img src="https://i.imgur.com/CswKQlo.png" height="80%" width="80%"/>
+If you do not have a "I don't have internet option," press shift + f10 and in the terminal, type "OOBE\BYPASSNRO".  Then shut down the VM and run it again.
 
 
+
+<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
+<img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
 <img src="https://i.imgur.com/MzP7kgA.png" height="80%" width="80%"/>
